@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Messenger">
+        <meta name="'author" content="matvey">
+        <title>Chat_list</title>
+        <link rel="stylesheet" href="screen.css">
+        <link rel="stylesheet" href="chat-sections.css">
+        <link rel="stylesheet" href="flying-button.css">
+        <link rel="stylesheet" href="header.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="phone-screen">
+            <header>
+                <div class="up-icons-tab">
+                    <i class="material-icons"  id="sca_icon">signal_cellular_alt</i>&nbsp;
+                    <i class="material-icons" id="wifi_icon">wifi</i>&nbsp;
+                    <i class="material-icons" id="battery_icon">battery_3_bar</i>
+                </div>
+                <button class="burger">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="title">Messenger</div>
+                <button class="search">
+                    <span class="material-icons">search</span>
+                </button>
+            </header>
+                <article class="chats-storage">
+                    <section class="chats" onclick="mainChat()">
+                        <div class="chat-picture">
+                            <img class='photo'src="https://via.placeholder.com/60" alt="profile-photo">
+                        </div>
+                        <div class="chat-details">
+                            <span class="chat-name">Matvey Agarkov</span>
+                            <span class="last-message">I love js</span>
+                        </div>
+                        <div class="chat-meta">
+                            <span class="last-mes-date">03:13</span>
+                            <div class="last-mes-state">
+                                <span class="material-icons">done_all</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="chats" onclick="mainChat()">
+                        <div class="chat-picture">
+                            <img class='photo'src="https://via.placeholder.com/60" alt="profile-photo">
+                        </div>
+                        <div class="chat-details">
+                            <span class="chat-name">Sergey Makarov</span>
+                            <span class="last-message">Let's study python</span>
+                        </div>
+                        <div class="chat-meta">
+                            <span class="last-mes-date">02:12</span>
+                            <div class="last-mes-state">
+                                <span class="material-icons">done_all</span>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <div class="container">
+                    <button class="float-button">
+                        <span class="material-icons">
+                            create
+                            </span>
+                    </button>
+                </div>
+         </div>
+        <script src="chat_list.js"></script>
+    </body>
+</html>
