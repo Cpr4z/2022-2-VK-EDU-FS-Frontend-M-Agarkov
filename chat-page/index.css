@@ -1,3 +1,4 @@
+
 html {
     box-sizing: border-box;
     font-family: Roboto;
@@ -28,8 +29,16 @@ div.phone-screen {
 
 header{
     display: flex;
-    height:120px;
+    flex-direction: column;
+    height:100px;
     background-color: #8e24aa;
+}
+
+.header-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 div.up-icons-tab {

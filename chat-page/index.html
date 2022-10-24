@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Messenger">
+        <meta name="'author" content="matvey">
+        <title>Chat</title>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="phone-screen">
+            <header>
+                <div class="up-icons-tab">
+                    <i class="material-icons"  id="sca_icon">signal_cellular_alt</i>&nbsp;
+                    <i class="material-icons" id="wifi_icon">wifi</i>&nbsp;
+                    <i class="material-icons" id="battery_icon">battery_3_bar</i>
+                </div>
+                <div class="header-info">
+                    <button class="back-button" type="">
+                        <span class="material-icons">arrow_back</span>
+                    </button>
+                    <div class="companion">
+                        <img class="companion-picture" src="https://via.placeholder.com/50" alt="profile_pic">
+                        <div class="companion-meta">
+                            <div class="companion-name">Matvey</div>
+                            <div class="companion-last-online">was 4 hours ago</div>
+                        </div>
+                    </div>
+                    <button class="search-button" type="">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <button class="more-button" type="">
+                        <span class="material-icons">more_vert</span>  
+                    </button>
+                </div>
+            </header>
+            <div class="chat">
+                <form class="form" action="/">
+                    <input class="form-input" name="message-text" placeholder="Cообщение" type="textarea">
+                    <button class="add-document-btn" ><span class="material-icons">attachment</span></button>
+                </form>
+                <div class="messages">
+                    <div class="message left">
+                        <div class="message-text">Hello, I'm Matvey!</div>
+                        <div class="message-meta">
+                            <div class="message-date">10:10</div>
+                        </div>
+                    </div>
+                    <div class="message right">
+                        <div class="message-text">Hi, Matvey</div>
+                        <div class="message-meta">
+                            <div class="message-date">10:15 </div>
+                            <div class="message-state">
+                                <span class="material-icons">done_all</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="message left">
+                        <div class="message-text">What's up, bro?</div>
+                        <div class="message-meta">
+                            <div class="message-date">10:20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="src/index.js" type="module"></script>
+    </body>
+</html>
