@@ -1,3 +1,8 @@
+import '../css/chat-sections.css'
+import '../css/screen.css'
+import '../css/header.css'
+import '../css/flying-button.css'
+
 function mainChat(){
-    window.location.href = 'file:///C:/Users/matve/2022-2-VK-EDU-FS-Frontend-M-Agarkov/src/index.html'
+    window.location.href = './index.html'
 }

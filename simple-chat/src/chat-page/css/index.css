@@ -14,6 +14,12 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .message-text {
+        font-size: 20px;
+    }
+}
+
 html {
     box-sizing: border-box;
     font-family: Roboto;
@@ -89,6 +95,9 @@ div.up-icons-tab {
     margin: 8px;
     padding: 16px 20px 0px 16px;
     word-break:break-all;
+
+    animation-duration: 1s;
+    animation-name: fadein;
 }
 
 .left {
@@ -122,6 +131,7 @@ div.up-icons-tab {
 
 .message-date {
     color: #787179;
+    padding-bottom: 8px;
 }
 
 .message-state {
@@ -153,6 +163,11 @@ div.up-icons-tab {
     padding-right: 15px;
     flex-basis: 60px;
     height: 100%;   
+    transition: background-color 0.1s, color 0,1s;
+}
+.add-document-btn:hover{
+    background-color:grey;
+    color: black;
 }
 
 input[type=submit] {
@@ -166,6 +181,16 @@ input[type=submit] {
     color: white;
     border: 0;
     flex-basis: 60px;
+    transition: background-color 0.1s, color 0.1s;
+    
+}
+
+
+.back-button:hover,
+.search-button:hover,
+.more-button:hover{
+background-color:  #d37ceb;
+color:black;
 }
 
 .companion-picture {

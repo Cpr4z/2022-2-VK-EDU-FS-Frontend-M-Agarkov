@@ -10,6 +10,7 @@
 .float-button {
     width: 70px;
     height: 70px;
+    box-shadow: 2px 2px #c6c3c7;
     border-radius: 50%;
     border: 0;
     background-color: #f9d667;

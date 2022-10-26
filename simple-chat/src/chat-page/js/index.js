@@ -1,4 +1,4 @@
-import './index.css';
+import '../css/index.css';
 
 const messages = document.querySelector('.messages');
 const form = document.querySelector('.form');   

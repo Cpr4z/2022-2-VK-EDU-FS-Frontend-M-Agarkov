@@ -44,6 +44,7 @@ color: white;
 display:flex;
 background-color: #8e24aa;
 border:0;
+justify-content: center;
 align-items: center;
 flex-grow:1;
 height: 40px;
@@ -53,4 +54,9 @@ height: 40px;
 }
 .search{
     padding-right: 20px;
+}
+.burger:hover,
+.search:hover{
+    background-color: #d37ceb;
+   color: black;
 }
