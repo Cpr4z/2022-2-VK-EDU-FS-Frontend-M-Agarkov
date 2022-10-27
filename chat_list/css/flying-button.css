@@ -1,0 +1,19 @@
+.container{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    position:fixed;
+    bottom:90px;
+    right: 550px;
+}
+.float-button {
+    width: 70px;
+    height: 70px;
+    box-shadow: 2px 2px #c6c3c7;
+    border-radius: 50%;
+    border: 0;
+    background-color: #f9d667;
+    bottom: 25px;
+    right: 25px;
+}
