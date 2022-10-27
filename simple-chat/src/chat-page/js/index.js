@@ -7,7 +7,7 @@ const back = document.querySelector('.back-button')
 form.addEventListener('submit', handleSubmit.bind(this));
 form.addEventListener('keypress', handleKeyPress.bind(this));
 window.addEventListener('DOMContentLoaded', getMessagesFromLocalStorage.bind(this));
-back-button.addEventListener('click',mainPage.bind(this));
+back.addEventListener('click',mainPage.bind(this));
 
 function handleKeyPress (event) {
     if (event.keyCode === 13) {
@@ -106,6 +106,6 @@ function createMessageBlock(message, save=true){
     } 
 }
 
-function mainPage(event){
-    window.location.href = ''
+function mainPage(){
+    window.location.href = 'index.html';
 }

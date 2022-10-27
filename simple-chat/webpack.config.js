@@ -64,13 +64,13 @@ module.exports = {
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: './chat_list/chat_list.html',
-            chunks:['chat'],
+            chunks:['home'],
         
         }),
         new HTMLWebpackPlugin({
-            filename:'chat_list.html',
+            filename:'chat.html',
             template:'./chat-page/index.html',
-            chunks:['home'],
+            chunks:['chat'],
         })
     ]
 };
