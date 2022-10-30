@@ -1,4 +1,4 @@
-import './index.css';
+import '../css/index.css';
 
 const messages = document.querySelector('.messages');
 const form = document.querySelector('.form');   
@@ -7,7 +7,7 @@ const back = document.querySelector('.back-button')
 form.addEventListener('submit', handleSubmit.bind(this));
 form.addEventListener('keypress', handleKeyPress.bind(this));
 window.addEventListener('DOMContentLoaded', getMessagesFromLocalStorage.bind(this));
-back-button.addEventListener('click',mainPage.bind(this));
+back.addEventListener('click',mainPage.bind(this));
 
 function handleKeyPress (event) {
     if (event.keyCode === 13) {
@@ -35,12 +35,15 @@ function getMessagesFromLocalStorage(){
         return
     }
     let messages = localStorage.getItem('messages')
+    console.log(messages)
     if (!messages){
         return
     }
     messages = JSON.parse(messages)
+    console.log(messages.all)
     for (let message of messages.all){
-        createMessageBlock(message, save=false)
+        console.log(message)
+        createMessageBlock(message, false)
     }
 }
 
@@ -59,7 +62,6 @@ function saveMessageToLocalStorage(message){
     if(!checkLocalStorage){
         return
     }
-
     let messages = localStorage.getItem('messages');
     if (messages == '' || messages == null){
         localStorage.setItem('messages', JSON.stringify({'all':[]}));
@@ -74,13 +76,15 @@ function saveMessageToLocalStorage(message){
 }
 
 function createMessageBlock(message, save=true){
-    
+    console.log(message.text)
+    console.log(message.date)
+    console.log(message.sender_name)
     let message_block = document.createElement('div')
     message_block.className = 'message right'
 
     let message_text = document.createElement('div')
     message_text.className = 'message-text'
-    message_text.innerHTML = message.text
+    message_text.innerText = message.text
     message_block.append(message_text)
 
     let message_meta = document.createElement('div')
@@ -88,7 +92,7 @@ function createMessageBlock(message, save=true){
     let message_state = document.createElement('div')
     message_meta.className = 'message-meta'
     message_date.classname = 'message-date'
-    message_date.innerHTML= message.date
+    message_date.innerText= message.date
     message_state.className = 'message-state'
     message_state.innerHTML = "<span class='material-icons'>done_all</span>"
 
@@ -102,6 +106,6 @@ function createMessageBlock(message, save=true){
     } 
 }
 
-function mainPage(event){
-    window.location.href = ''
+function mainPage(){
+    window.location.href = 'index.html';
 }
