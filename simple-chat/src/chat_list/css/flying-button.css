@@ -3,9 +3,10 @@
     height: 100px;
     display: flex;
     justify-content: flex-end;
-    position:fixed;
-    bottom:90px;
-    right: 550px;
+    align-items: flex-end;
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
 }
 .float-button {
     width: 70px;
@@ -16,4 +17,30 @@
     background-color: #f9d667;
     bottom: 25px;
     right: 25px;
+    animation:pulse 2s infinite;
 }
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
