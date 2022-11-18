@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { SidebarPage } from './pages/SidebarPage'
-import { ProfilePage } from './pages/ProfilePage'
+import { SidebarPage } from './Pages/SidebarPage'
+import { ProfilePage } from './Pages/ProfilePage'
 
-import { Layout } from './pages/Layout'
+import { Layout } from './Pages/Layout'
 
 
 function App() {

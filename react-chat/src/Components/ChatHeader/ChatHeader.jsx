@@ -11,7 +11,7 @@ function ChatHeader() {
                     alt="profile_pic"
                 />
                 <div className={styles.companionMeta}>
-                    <span className={styles.companionName}>Dmitrii Oreshkin</span>
+                    <span className={styles.companionName}>Matvey Agarkov</span>
                     <span className={styles.companionLastOnline}>was 1 hour ago</span>
                 </div>
             </section>

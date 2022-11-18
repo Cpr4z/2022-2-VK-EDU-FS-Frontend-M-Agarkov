@@ -22,7 +22,7 @@ function ChatMessageForm({sendMessage}) {
         let message = {
             'text': value,
             'date': `${time.getHours()}:${time.getMinutes()}`,
-            'sender_name': 'Dmitrii Oreshkin'
+            'sender_name': 'Matvey Agarkov'
         };
 
         sendMessage(message);

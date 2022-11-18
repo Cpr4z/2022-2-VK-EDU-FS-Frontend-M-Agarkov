@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import React from 'react'
 import { ChatPage } from "../ChatPage";
 import styles from "../ChatPage/ChatPage.module.scss";
 
