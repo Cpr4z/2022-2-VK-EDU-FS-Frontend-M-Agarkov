@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import { ChatHeader } from '../../components/ChatHeader'
-import { ChatBody } from '../../components/ChatBody'
-import { ChatMessageForm } from '../../components/ChatMessageForm'
+import { ChatHeader } from '../../Components/ChatHeader'
+import { ChatBody } from '../../Components/ChatBody'
+import { ChatMessageForm } from '../../Components/ChatMessageForm'
 
 import {
     getMesagesFromLocalStorage,

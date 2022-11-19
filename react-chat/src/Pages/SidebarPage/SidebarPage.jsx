@@ -1,8 +1,8 @@
 import React from "react";
 
-import { SidebarHeader } from "../../components/SidebarHeader";
-import { SidebarBody } from "../../components/SidebarBody";
-import { FloatButton } from "../../components/FloatButton";
+import { SidebarHeader } from "../../Components/SidebarHeader";
+import { SidebarBody } from "../../Components/SidebarBody";
+import { FloatButton } from "../../Components/FloatButton";
 
 import styles from "./SidebarPage.module.scss";
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ProfileHeader } from "../../components/ProfileHeader";
-import { ProfileBody } from "../../components/ProfileBody";
+import { ProfileHeader } from "../../Components/ProfileHeader";
+import { ProfileBody } from "../../Components/ProfileBody";
 
 import styles from "./ProfilePage.module.scss";
 
