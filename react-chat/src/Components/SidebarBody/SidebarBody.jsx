@@ -16,7 +16,7 @@ function SidebarBody({openChat}) {
                     <img className={styles.picture} src="https://via.placeholder.com/60" alt="profile_pic" />
                 </div>
                 <div className={styles.chatDetails}>
-                    <span className={styles.chatName}>Dmitrii Oreshkin</span>
+                    <span className={styles.chatName}>Matvey Agarkov2</span>
                     <span className={styles.chatLastMessage}>hello, world</span>
                 </div>
                 <div className={styles.chatMeta}>
@@ -30,7 +30,7 @@ function SidebarBody({openChat}) {
                     <img className={styles.picture} src="https://via.placeholder.com/60" alt="profile_pic" />
                 </div>
                 <div className={styles.chatDetails}>
-                    <span className={styles.chatName}>Dmitrii Oreshkin</span>
+                    <span className={styles.chatName}>Matvey Agarkov1</span>
                     <span className={styles.chatLastMessage}>hello, world</span>
                 </div>
                 <div className={styles.chatMeta}>
