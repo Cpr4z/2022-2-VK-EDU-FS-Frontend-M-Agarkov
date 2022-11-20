@@ -1,5 +1,5 @@
 import React from 'react'
-
+import 'material-icons/iconfont/material-icons.css';
 import styles from './SidebarBody.module.scss'
 
 function SidebarBody({openChat}) {
@@ -21,7 +21,9 @@ function SidebarBody({openChat}) {
                 </div>
                 <div className={styles.chatMeta}>
                     <span className={styles.LastMessageTime}>13:39</span>
-                    <span className={styles.messageState}>99</span>
+                    <div className={styles.messageState} type="">
+                        <span className="material-icons">done</span>
+                    </div>
                 </div>
             </section>
 
@@ -35,7 +37,9 @@ function SidebarBody({openChat}) {
                 </div>
                 <div className={styles.chatMeta}>
                     <span className={styles.LastMessageTime}>13:39</span>
-                    <span className={styles.messageState}>99</span>
+                    <div className={styles.messageState} type="">
+                        <span className="material-icons">done_all</span>
+                    </div>
                 </div>
             </section>
 
