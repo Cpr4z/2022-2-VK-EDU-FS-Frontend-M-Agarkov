@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
 
 function SidebarBody({ openChat }) {
-    //     планируется делать запрос на бэк, ответ от которого - это массив со всеми чатами пользователя.
-    //     у чата есть свой id и другая информация, эта информация передается в функцию openChat(), которая открывает этот чат
 
     const [chats, setChats] = useState([]);
 
     function getChats(id) {
-        fetch("http://localhost:8000/api/v1/users/user/2/get_all_chats", {
+        fetch(`http://localhost:8000/chats/owned_by_user/${id}`, {
             method: "GET",
+            mode:"no-cors",
             headers: {
                 "Content-Type": "application/json",
             },
