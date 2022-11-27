@@ -36,6 +36,4 @@ function ChatBody({ messages, chat }) {
 }
 
 export { ChatBody };
-}
 
-export { ChatBody };
