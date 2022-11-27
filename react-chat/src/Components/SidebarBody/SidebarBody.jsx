@@ -3,19 +3,22 @@ import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
 
 function SidebarBody({ openChat }) {
+    //     планируется делать запрос на бэк, ответ от которого - это массив со всеми чатами пользователя.
+    //     у чата есть свой id и другая информация, эта информация передается в функцию openChat(), которая открывает этот чат
 
     const [chats, setChats] = useState([]);
 
     function getChats(id) {
-        fetch(`http://localhost:8000/chats/owned_by_user/${id}`, {
+        fetch(`chats/owned_by_user/${id}`, {
             method: "GET",
-            mode:"no-cors",
+            mode:'no-cors',
             headers: {
                 "Content-Type": "application/json",
             },
         })
             .then((resp) => resp.json())
-            .then((data) => setChats(data));
+            .then((data) => {
+                setChats(data)});
     }
 
     useEffect(() => {
@@ -42,7 +45,7 @@ function SidebarBody({ openChat }) {
                 </div>
 
                 <div className={styles.chatDetails}>
-                    <span className={styles.chatName}>{chat.title}</span>
+                    <span className={styles.chatName}>{chat.id}</span>
                     <span className={styles.chatLastMessage}>hello, world</span>
                 </div>
                 <div className={styles.chatMeta}>
