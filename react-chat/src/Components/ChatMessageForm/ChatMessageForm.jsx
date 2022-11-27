@@ -21,7 +21,7 @@ function ChatMessageForm({ sendMessage, chat }) {
             chat_id: chat.id,
             // date: `${time.getHours()}:${time.getMinutes()}`, // время отправки будет назначатся на сервере
             author_id: 2, // когда сделаю авторизацию, это поле можно будет убрать
-            author: "Matvey Agarkov",
+            author: "Matvey",
         };
 
         sendMessage(message);
