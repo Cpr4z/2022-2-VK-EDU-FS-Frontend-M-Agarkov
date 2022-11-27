@@ -11,11 +11,11 @@ function ChatBody({ messages, chat }) {
                 key={index}
                 className={`${styles.message} ${
                     // chat.id === message.author ? styles.right : styles.left
-                    message.author === "Matvey Agarkov" ? styles.right : styles.left
+                    message.author === 2 ? styles.right : styles.left
                 }`}
             >
                 <div className={styles.messageMeta}>
-                    {message.author === "Matvey Agarkov" ? (
+                    {message.author === 2 ? (
                         <>
                             <span className={styles.messageDate}>{message.date}</span>
                             <span className={styles.messageAuthor}>{message.author}</span>
@@ -33,6 +33,9 @@ function ChatBody({ messages, chat }) {
     });
 
     return <section className={styles.chat}>{messageBlocks}</section>;
+}
+
+export { ChatBody };
 }
 
 export { ChatBody };
