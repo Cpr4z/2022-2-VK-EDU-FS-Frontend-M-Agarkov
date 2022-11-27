@@ -6,7 +6,7 @@ function ProfileBody() {
     const [user, setUser] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:8080/api/v1/users/user/2/get_user_info/`)
+        fetch(`users/user/2/get_user_info/`)
             .then((resp) => resp.json())
             .then((data) => setUser(data));
     }, []);
