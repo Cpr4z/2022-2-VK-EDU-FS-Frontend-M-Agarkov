@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.fa8176f1.css",
-    "main.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.93ed55a9.js",
+    "main.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.48a5530c.js",
     "static/js/787.890e5f70.chunk.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/787.890e5f70.chunk.js",
     "static/media/material-icons-two-tone.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-two-tone.3baa5b8f3469222b822d.woff",
     "static/media/material-icons-two-tone.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-two-tone.4ef4218c522f1eb6b5b1.woff2",
@@ -15,11 +15,11 @@
     "static/media/material-icons.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons.0c35d18bf06992036b69.woff2",
     "index.html": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/index.html",
     "main.fa8176f1.css.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.fa8176f1.css.map",
-    "main.93ed55a9.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.93ed55a9.js.map",
+    "main.48a5530c.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.48a5530c.js.map",
     "787.890e5f70.chunk.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/787.890e5f70.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa8176f1.css",
-    "static/js/main.93ed55a9.js"
+    "static/js/main.48a5530c.js"
   ]
 }
