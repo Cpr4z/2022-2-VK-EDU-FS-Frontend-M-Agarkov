@@ -7,11 +7,6 @@ import { ChatMessageForm } from "../../Components/ChatMessageForm";
 
 import styles from "../Pages.module.scss";
 
-
-// import { Centrifuge } from "centrifuge";
-// const centrifuge = new Centrifuge("ws://localhost:8000/connection/websocket");
-// const sub = centrifuge.newSubscription("chat");
-
 function ChatPage({ chat }) {
     const [messages, setMessages] = useState([]);
 
@@ -34,11 +29,11 @@ function ChatPage({ chat }) {
                     .then((resp) => resp.json())
                     .then((data) => setMessages(data.reverse()));
             };
-            setInterval(() => pollItems(), 3000);
+            setInterval(() => pollItems(), 2000);
 
             return;
         }
-        fetch(`http://localhost:8080/api/v1/chats/messages_in_chat/${chat.id}/`)
+        fetch(`chats/messages_in_chat/${chat.id}/`)
             .then((resp) => resp.json())
             .then((data) => setMessages(data.reverse()));
     }, [chat]);
@@ -61,7 +56,7 @@ function ChatPage({ chat }) {
             });
             return;
         }
-        fetch("http://localhost:8080/api/v1/chats/messages_in_chat/3/", {
+        fetch("chats/messages_in_chat/3/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
