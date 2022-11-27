@@ -1,25 +1,15 @@
 {
   "files": {
-    "main.css": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.fa8176f1.css",
-    "main.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.48a5530c.js",
+    "main.css": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.07e3fc7a.css",
+    "main.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.476e8c44.js",
     "static/js/787.890e5f70.chunk.js": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/787.890e5f70.chunk.js",
-    "static/media/material-icons-two-tone.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-two-tone.3baa5b8f3469222b822d.woff",
-    "static/media/material-icons-two-tone.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-two-tone.4ef4218c522f1eb6b5b1.woff2",
-    "static/media/material-icons-round.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-round.5d681e2edae8c60630db.woff",
-    "static/media/material-icons-outlined.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-outlined.f882956fd323fd322f31.woff",
-    "static/media/material-icons-round.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-round.c380809fd3677d7d6903.woff2",
-    "static/media/material-icons.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons.4d73cb90e394b34b7670.woff",
-    "static/media/material-icons-sharp.woff": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-sharp.3a4004a46a653d4b2166.woff",
-    "static/media/material-icons-outlined.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-outlined.6f420cf17cc0d7676fad.woff2",
-    "static/media/material-icons-sharp.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons-sharp.219aa9140e099e6c72ed.woff2",
-    "static/media/material-icons.woff2": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/media/material-icons.0c35d18bf06992036b69.woff2",
     "index.html": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/index.html",
-    "main.fa8176f1.css.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.fa8176f1.css.map",
-    "main.48a5530c.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.48a5530c.js.map",
+    "main.07e3fc7a.css.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/css/main.07e3fc7a.css.map",
+    "main.476e8c44.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/main.476e8c44.js.map",
     "787.890e5f70.chunk.js.map": "/2022-2-VK-EDU-FS-Frontend-M-Agarkov/static/js/787.890e5f70.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa8176f1.css",
-    "static/js/main.48a5530c.js"
+    "static/css/main.07e3fc7a.css",
+    "static/js/main.476e8c44.js"
   ]
 }
