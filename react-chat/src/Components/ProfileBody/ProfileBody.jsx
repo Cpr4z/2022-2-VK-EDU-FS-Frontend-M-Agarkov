@@ -24,11 +24,17 @@ function ProfileBody() {
             />
             <div className={`${styles.fullName} ${styles.graybackground}`}>
                 <span>First name</span>
-                <input className={styles.graybackground} type="text" />
+                <input className={styles.graybackground}
+                       type="text"
+                       value={user.first_name}
+                />
             </div>
             <div className={`${styles.fullName} ${styles.graybackground}`}>
                 <span>Last name</span>
-                <input className={styles.graybackground} type="text" />
+                <input className={styles.graybackground}
+                       type="text"
+                       value={user.last_name}
+                />
             </div>
             <div className={`${styles.username} ${styles.graybackground}`}>
                 <span>Username</span>
@@ -46,7 +52,7 @@ function ProfileBody() {
                     id=""
                     cols="30"
                     rows="10"
-                    value={user.description}
+                    value={user.user_info}
                 ></textarea>
             </div>
         </section>
