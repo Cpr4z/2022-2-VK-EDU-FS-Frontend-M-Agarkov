@@ -19,11 +19,10 @@ function ChatMessageForm({ sendMessage, chat }) {
         let message = {
             text: value,
             chat_id: chat.id,
-            // date: `${time.getHours()}:${time.getMinutes()}`, // время отправки будет назначатся на сервере
-            author_id: 2, // когда сделаю авторизацию, это поле можно будет убрать
+            author_id: 2,
             author: "Matvey",
         };
-
+        console.log(message.chat_id)
         sendMessage(message);
         setValue("");
     }
