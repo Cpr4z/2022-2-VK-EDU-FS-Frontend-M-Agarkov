@@ -7,19 +7,14 @@ import { ChatMessageForm } from "../../Components/ChatMessageForm";
 
 import styles from "../Pages.module.scss";
 
+
 function ChatPage({ chat }) {
     const [messages, setMessages] = useState([]);
 
-//   function addMessagesToChat(ctx) {
-//     setMessages((prev) => {
-//       const newMessages = Object.assign([], prev);
-//       newMessages.unshift(ctx.data.message);
-//       return newMessages;
-//     });
-//   }
 
     useEffect(() => {
-        // console.log("messages", messages);
+        //console.log("messages", messages);
+        console.log(chat.id)
     }, [messages]);
 
     useEffect(() => {
@@ -39,10 +34,6 @@ function ChatPage({ chat }) {
     }, [chat]);
 
     useEffect(() => {
-        // чтобы соединение не пыталось установиться на GP
-        // sub.on("publication", addMessagesToChat);
-        // sub.subscribe();
-        // centrifuge.connect();
     }, []);
 
     function sendMessage(message) {
@@ -56,7 +47,7 @@ function ChatPage({ chat }) {
             });
             return;
         }
-        fetch("chats/messages_in_chat/3/", {
+        fetch(`chats/messages_in_chat/${message.chat_id}/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -67,7 +58,7 @@ function ChatPage({ chat }) {
 
     return (
         <section className={styles.chatPage}>
-            <ChatHeader name={chat.title} />
+            <ChatHeader name={chat.id} />
             <ChatBody messages={messages} chat={chat} />
             <ChatMessageForm sendMessage={sendMessage} chat={chat} />
         </section>
@@ -75,3 +66,4 @@ function ChatPage({ chat }) {
 }
 
 export { ChatPage };
+
