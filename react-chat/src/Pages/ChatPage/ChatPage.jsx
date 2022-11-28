@@ -25,7 +25,7 @@ function ChatPage({ chat }) {
 
     useEffect(() => {
         //console.log("messages", messages);
-        console.log(chat.id)
+        //console.log(chat.id)
     }, [messages]);
 
     useEffect(() => {
