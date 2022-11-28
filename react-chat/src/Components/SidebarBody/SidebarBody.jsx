@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
 
 function SidebarBody({ openChat }) {
-    //     планируется делать запрос на бэк, ответ от которого - это массив со всеми чатами пользователя.
-    //     у чата есть свой id и другая информация, эта информация передается в функцию openChat(), которая открывает этот чат
 
     const [chats, setChats] = useState([]);
 
@@ -73,11 +71,8 @@ function SidebarBody({ openChat }) {
                 </div>
                 <div className={styles.chatDetails}>
                     <span className={styles.chatName}>Frontend chat</span>
-                    {/* <span className={styles.chatLastMessage}>hello, world</span> */}
                 </div>
                 <div className={styles.chatMeta}>
-                    {/* <span className={styles.LastMessageTime}>13:39</span> */}
-                    {/* <span className={styles.messageState}>99</span> */}
                 </div>
             </section>
         </article>
