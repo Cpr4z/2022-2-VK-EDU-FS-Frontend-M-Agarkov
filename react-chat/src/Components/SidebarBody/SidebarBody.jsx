@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
+import { useNavigate } from "react-router-dom";
 
 function SidebarBody({ openChat }) {
 
     const [chats, setChats] = useState([]);
+    const navigate = useNavigate();
 
     function getChats(id) {
         fetch(`chats/owned_by_user/${id}`, {
@@ -32,7 +34,10 @@ function SidebarBody({ openChat }) {
             <section
                 key={index}
                 className={styles.chatPreview}
-                onClick={() => openChat(chat)}
+                onClick={() => {
+                    openChat(chat)
+                    navigate(`/chat/${chat.id}`);
+                }}
             >
                 <div className={styles.chatPicture}>
                     <img
