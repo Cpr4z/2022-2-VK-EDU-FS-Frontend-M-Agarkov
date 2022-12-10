@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
+import recieveCSRF from "./getCSRF";
 import { ChatHeader } from "../../Components/ChatHeader";
 import { ChatBody } from "../../Components/ChatBody";
 import { ChatMessageForm } from "../../Components/ChatMessageForm";
@@ -8,25 +8,25 @@ import { ChatMessageForm } from "../../Components/ChatMessageForm";
 import styles from "../Pages.module.scss";
 
 
-// import { Centrifuge } from "centrifuge";
-// const centrifuge = new Centrifuge("ws://localhost:8000/connection/websocket");
-// const sub = centrifuge.newSubscription("chat");
+import { Centrifuge } from "centrifuge";
+const centrifuge = new Centrifuge("ws://localhost:8000/connection/websocket");
+const sub = centrifuge.newSubscription("chat");
 
 function ChatPage({ chat }) {
     const [messages, setMessages] = useState([]);
 
-//   function addMessagesToChat(ctx) {
-//     setMessages((prev) => {
-//       const newMessages = Object.assign([], prev);
-//       newMessages.unshift(ctx.data.message);
-//       return newMessages;
-//     });
-//   }
+   function addMessagesToChat(ctx) {
+     setMessages((prev) => {
+       const newMessages = Object.assign([], prev);
+       newMessages.unshift(ctx.data.message);
+       return newMessages;
+     });
+   }
 
-    useEffect(() => {
+    //useEffect(() => {
         //console.log("messages", messages);
         //console.log(chat.id)
-    }, [messages]);
+    //}, [messages]);
 
     useEffect(() => {
         if (chat.id === -1) {
@@ -57,6 +57,7 @@ function ChatPage({ chat }) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "X-CSRFToken": recieveCSRF()
                 },
                 body: JSON.stringify(message),
             });
@@ -66,6 +67,7 @@ function ChatPage({ chat }) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "X-CSRFToken": recieveCSRF()
             },
             body: JSON.stringify(message),
         });
