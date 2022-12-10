@@ -46,9 +46,9 @@ function ChatPage({ chat }) {
 
     useEffect(() => {
         // чтобы соединение не пыталось установиться на GP
-        // sub.on("publication", addMessagesToChat);
-        // sub.subscribe();
-        // centrifuge.connect();
+         sub.on("publication", addMessagesToChat);
+         sub.subscribe();
+         centrifuge.connect();
     }, []);
 
     function sendMessage(message) {
