@@ -28,7 +28,7 @@ function ChatBody({ messages, chat }) {
                 </div>
                 <div className={styles.messageText}>
                     {message.image && (
-                        <img className={styles.image} src={message.image} alt=""/>
+                        <img className={styles.file} src={message.file} alt=""/>
                     )}
                     {message.audio && (
                         <audio controls="controls" src={message.audio}></audio>
