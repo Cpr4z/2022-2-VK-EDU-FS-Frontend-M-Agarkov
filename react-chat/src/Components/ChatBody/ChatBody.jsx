@@ -10,7 +10,7 @@ function ChatBody({ messages, chat }) {
             <div
                 key={index}
                 className={`${styles.message} ${
-                    message.author === "Matvey" ? styles.right : styles.left
+                    message.author === "Matvey" ? styles.left : styles.right
                 }`}
             >
                 <div className={styles.messageMeta}>
