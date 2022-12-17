@@ -1,7 +1,7 @@
 import { SET_MOBILE_VIEW, SET_DESKTOP_VIEW } from "../constants/reducer";
 
 const initialState = {
-    isMobile: false,
+    //isMobile: false,
     isDesktop: true,
 };
 
