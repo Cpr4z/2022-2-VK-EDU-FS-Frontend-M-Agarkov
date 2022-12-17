@@ -7,8 +7,7 @@ import { connect, useSelector } from "react-redux";
 import { getMessagesAction } from "../../actions/messageAction";
 import { renderNewMessageAction } from "../../actions/messageAction";
 
-function ChatBody(props) {
-    const chat = useSelector();
+function ChatBody(props, {chat}) {
 
     useEffect(() => {
         props.getMessagesAction(chat.id);
