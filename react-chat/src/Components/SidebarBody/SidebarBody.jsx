@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
 import { useNavigate } from "react-router-dom";
 
-import { connect } from "react-redux";
+//import { connect } from "react-redux";
 
-function SidebarBody(props) {
+function SidebarBody(props, {openChat}) {
 
     const [chats, setChats] = useState([]);
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ function SidebarBody(props) {
                 key={index}
                 className={styles.chatPreview}
                 onClick={() => {
-                    props.openChatAction(chat);
+                    openChat(chat);
                     navigate(`/chat/${chat.id}`);
                 }}
             >
@@ -67,7 +67,7 @@ function SidebarBody(props) {
             <section
                 className={styles.chatPreview}
                 onClick={() => {
-                    props.openChatAction({ id: -1, title: "Front-end chat" });
+                    openChat({ id: -1, title: "Front-end chat" });
                     navigate(`/chat/-1`);
                 }}
             >
@@ -86,4 +86,6 @@ function SidebarBody(props) {
         </article>
     );
 }
+
+export {SidebarBody}
 
