@@ -4,7 +4,6 @@ import styles from "./SidebarBody.module.scss";
 import { useNavigate } from "react-router-dom";
 
 import { connect } from "react-redux";
-import { openChatAction } from "../../actions/activeChatAction";
 
 function SidebarBody(props) {
 
@@ -88,8 +87,3 @@ function SidebarBody(props) {
     );
 }
 
-const mapStateToProps = (state) => ({
-    chat: state.activeChatsReduser,
-});
-
-export default connect(mapStateToProps, { openChatAction })(SidebarBody);
