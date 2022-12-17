@@ -6,7 +6,7 @@ import useRecorder from "./Recorder";
 import { newMessageAction } from "../../actions/messageAction";
 
 function ChatMessageForm(props) {
-    const chat = useSelector((state) => state.activeChatReduser);
+    const chat = useSelector();
 
     const [value, setValue] = useState("");
     const [file, setFile] = useState([]);
