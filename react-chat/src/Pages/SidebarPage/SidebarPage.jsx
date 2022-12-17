@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 import { SidebarHeader } from "../../Components/SidebarHeader";
-import SidebarBody from "../../Components/SidebarBody/SidebarBody";
+import {SidebarBody} from "../../Components/SidebarBody/SidebarBody";
 import { SidebarSearchField } from "../../Components/SidebarSearchField";
 
 import styles from "./SidebarPage.module.scss";
