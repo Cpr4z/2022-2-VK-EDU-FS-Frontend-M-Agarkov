@@ -3,7 +3,6 @@ import { SET_MOBILE_VIEW, SET_DESKTOP_VIEW } from "../constants/reducer";
 const setMobileView = () => ({
     type: SET_MOBILE_VIEW,
     payload: {
-        isMobile: true,
         isDesktop: false,
     },
 });
@@ -11,7 +10,6 @@ const setMobileView = () => ({
 const setDesktopView = () => ({
     type: SET_DESKTOP_VIEW,
     payload: {
-        isMobile: false,
         isDesktop: true,
     },
 });
