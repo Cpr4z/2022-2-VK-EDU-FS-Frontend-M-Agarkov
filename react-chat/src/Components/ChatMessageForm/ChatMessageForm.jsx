@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import styles from "./ChatMessageForm.module.scss";
 import useRecorder from "./Recorder";
 import { newMessageAction } from "../../actions/messageAction";
 
-function ChatMessageForm(props) {
-    const chat = useSelector();
+function ChatMessageForm(props, {chat}) {
 
     const [value, setValue] = useState("");
     const [file, setFile] = useState([]);
