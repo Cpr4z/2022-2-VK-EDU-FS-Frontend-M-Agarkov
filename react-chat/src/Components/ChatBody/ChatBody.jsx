@@ -8,7 +8,7 @@ import { getMessagesAction } from "../../actions/messageAction";
 import { renderNewMessageAction } from "../../actions/messageAction";
 
 function ChatBody(props) {
-    const chat = useSelector((state) => state.activeChatReduser);
+    const chat = useSelector();
 
     useEffect(() => {
         props.getMessagesAction(chat.id);
