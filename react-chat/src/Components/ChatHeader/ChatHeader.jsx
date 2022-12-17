@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ChatHeader.module.scss";
 
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 
 const showNotification = () => {
     if (window.Notification && Notification.permission !== "denied") {
@@ -14,8 +14,7 @@ const showNotification = () => {
     }
 };
 
-function ChatHeader() {
-    const chat = useSelector();
+function ChatHeader({chat}) {
 
     return (
         <header className={styles.header}>
