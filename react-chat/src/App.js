@@ -19,6 +19,8 @@ const centrifuge = new Centrifuge("ws://localhost:8000/connection/websocket");
 const sub = centrifuge.newSubscription("chat");
 
 function App(props) {
+    const user = useSelector((state) => state.activeUserReducer);
+    
     function addMessagesToChat(ctx) {
         props.renderNewMessageAction(ctx.data.message);
     }
