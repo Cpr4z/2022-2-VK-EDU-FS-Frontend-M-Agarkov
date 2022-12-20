@@ -5,4 +5,5 @@ import messageReduser from "./messageReduser";
 export default combineReducers({
     viewReduser,
     messageReduser,
+    activeUserReducer,
 });
