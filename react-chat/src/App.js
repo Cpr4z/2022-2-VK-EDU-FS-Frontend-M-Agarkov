@@ -7,6 +7,8 @@ import { ProfilePage } from './Pages/ProfilePage'
 import { NavButtons } from "./Pages/NavButtons";
 
 import ChatPage from "./Pages/ChatPage/ChatPage.jsx";
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import { RequireAuth } from "./Auth/RequireAuth";
 
 import { connect } from "react-redux";
 import { setViewAction } from "./actions/viewAction";
@@ -49,24 +51,29 @@ function App(props) {
 
     return (
         <>
-            <NavButtons />
+            {user.isLoggedIn ? (
+                <>
+                    <NavButtons />
+                    {props.view.isDesktop ? (
+                        <Routes>
+                            <Route exact path="/" element={<SidebarPage />}>
+                                <Route path={`/chat/:id`} element={<ChatPage />} />
+                                <Route path="/profile" element={<ProfilePage />} />
+                                <Route path="*" element={<Navigate to="/" replace />} />
+                            </Route>
+                        </Routes>
+                    ) : (
+                        <Routes>
+                            <Route exact path="/" element={<SidebarPage />} />
+                            <Route path="/profile" element={<ProfilePage />} />
 
-            {props.view.isDesktop ? (
-                <Routes>
-                    <Route exact path="/" element={<SidebarPage />}>
-                        <Route path={`/chat/:id`} element={<ChatPage />} />
-                        <Route path="/profile" element={<ProfilePage />} />
-                        <Route path="*" element={<Navigate to="/" replace />} />
-                    </Route>
-                </Routes>
+                            <Route path={`/chat/:id`} element={<ChatPage />} />
+                            <Route path="*" element={<Navigate to="/" replace />} />
+                        </Routes>
+                    )}
+                </>
             ) : (
-                <Routes>
-                    <Route exact path="/" element={<SidebarPage />} />
-                    <Route path="/profile" element={<ProfilePage />} />
-
-                    <Route path={`/chat/:id`} element={<ChatPage />} />
-                    <Route path="*" element={<Navigate to="/" replace />} />
-                </Routes>
+                <LoginPage />
             )}
         </>
     );
