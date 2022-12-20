@@ -10,7 +10,7 @@ import ChatPage from "./Pages/ChatPage/ChatPage.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import { RequireAuth } from "./Auth/RequireAuth";
 
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { setViewAction } from "./actions/viewAction";
 import { renderNewMessageAction } from "./actions/messageAction";
 
