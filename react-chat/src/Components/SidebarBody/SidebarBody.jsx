@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 //import { connect } from "react-redux";
 
-function SidebarBody(props, {openChat}) {
+function SidebarBody(props) {
 
     const [chats, setChats] = useState([]);
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ function SidebarBody(props, {openChat}) {
                 key={index}
                 className={styles.chatPreview}
                 onClick={() => {
-                    openChat(chat);
+                    //openChat(chat);
                     navigate(`/chat/${chat.id}`);
                 }}
             >
@@ -67,7 +67,7 @@ function SidebarBody(props, {openChat}) {
             <section
                 className={styles.chatPreview}
                 onClick={() => {
-                    openChat({ id: -1, title: "Front-end chat" });
+                    //openChat({ id: -1, title: "Front-end chat" });
                     navigate(`/chat/-1`);
                 }}
             >
