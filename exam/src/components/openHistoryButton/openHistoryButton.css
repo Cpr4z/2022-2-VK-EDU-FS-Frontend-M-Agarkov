@@ -1,0 +1,10 @@
+/*@import 'material-icons';*/
+
+.history-button {
+    text-decoration: none;
+    font-size: 8vh;
+    top: 11vh;
+    left: 45vw;
+    position: fixed;
+    color: lightgrey;
+}

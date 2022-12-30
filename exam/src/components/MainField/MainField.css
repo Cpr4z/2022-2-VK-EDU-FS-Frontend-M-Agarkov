@@ -1,0 +1,13 @@
+.main-page-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+
+.working-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+}
