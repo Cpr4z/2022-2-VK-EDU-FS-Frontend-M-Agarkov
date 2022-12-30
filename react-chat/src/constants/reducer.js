@@ -3,3 +3,5 @@ export const GET_MESSAGES_FAILURE = "GET_MESSAGES_FAILURE";
 export const ADD_NEW_MESSAGE = "ADD_NEW_MESSAGE";
 export const SET_MOBILE_VIEW = "SET_MOBILE_VIEW";
 export const SET_DESKTOP_VIEW = "SET_DESKTOP_VIEW";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
