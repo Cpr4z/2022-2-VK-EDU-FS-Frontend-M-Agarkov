@@ -1,12 +1,7 @@
 import React from 'react';
-import './OpenHistoryButton.css'
+import { Link } from 'react-router-dom'
+import './openHistoryButton.css'
 
-const OpenHistoryButton = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+export const OpenHistoryButton = () => {
+    return <Link className="history-button material-icons" to="/history" >history</Link>
 };
-
-export default OpenHistoryButton;

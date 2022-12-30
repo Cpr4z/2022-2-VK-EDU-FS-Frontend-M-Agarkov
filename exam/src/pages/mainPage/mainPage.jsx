@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Header from '../../components/header/header'
-import TranslatePanel from "../../components/translatePanel/translatePanel";
+import {OpenHistoryButton} from "../../components/openHistoryButton/openHistoryButton";
+import {TranslateButton} from "../../components/TranslateButton/translateButton";
+import {LangSwitchField} from "../../components/langSwitchField/langSwitchField";
+import {MainField} from "../../components/MainField/MainField";
 
 const MainPage = () => {
     return (
-        <div className={'mainPage'}>
-            <Header/>
-            <TranslatePanel/>
+        <div className={'page-layout'}>
+            <Header content={"VK translate"}/>
+            <TranslateButton/>
+            <LangSwitchField/>
+            <MainField/>
+            <OpenHistoryButton/>
         </div>
     );
 };

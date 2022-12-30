@@ -5,7 +5,7 @@ import {routes} from './../router/index'
 const AppRouter = () => {
     return (
         <Routes>
-            {routes.map(route =>
+        {routes.map(route =>
                 <Route element={route.element}
                 path={route.path}
                 exact={route.exact}

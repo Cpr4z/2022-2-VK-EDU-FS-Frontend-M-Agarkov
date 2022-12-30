@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Header from "../../components/header/header";
+import TranslateHistory from "../../components/TranslateHistory/TranslateHistory";
 
 const HistoryPage = () => {
     return (
-        <div>
-            
-        </div>
+        <Fragment>
+            <Header content={"History"}/>
+            <TranslateHistory/>
+        </Fragment>
     );
 };
 

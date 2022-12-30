@@ -1,11 +1,6 @@
-.header{
-  display:flex;
-}
-.VKTranslate{
+header {
   display: flex;
-  align-content: flex-start;
-  color: grey;
-  font-size:20px;
-  padding-left:30px;
-  padding-top:10px;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 1px solid lightgray;
 }

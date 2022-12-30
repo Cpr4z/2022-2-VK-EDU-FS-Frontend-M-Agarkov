@@ -1,11 +1,11 @@
 import React from 'react';
-import cl from './header.module.css'
-const Header = () => {
+import './header.module.css'
+import {Text} from "../Text/text";
+const Header = ({content}) => {
     return (
-        <div className={cl.header}>
-            <div className={cl.VKTranslate}>VK Translate</div>
-                <p/>
-        </div>
+        <header>
+            <Text className={'header'} content={content}/>
+        </header>
     );
 };
 
