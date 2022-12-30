@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Header from '../../components/header/header'
 import {OpenHistoryButton} from "../../components/openHistoryButton/openHistoryButton";
 import {TranslateButton} from "../../components/TranslateButton/translateButton";
