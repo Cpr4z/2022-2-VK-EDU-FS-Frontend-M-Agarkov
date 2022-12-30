@@ -30,7 +30,7 @@ export const InputArea = () => {
 
     const handleSubmit = async ({Text, Language}) => {
         let translations = []
-        let translated = await performTranslate({text: Text, language:Language})
+        let translated = await performTranslate({text: Text, translateTo:Language})
         translated = translated[0].translations[0].Text
 
         if (localStorage.length) translations = JSON.parse(localStorage.getItem('translations'))
