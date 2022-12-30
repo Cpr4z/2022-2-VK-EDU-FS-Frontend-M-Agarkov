@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import styles from "./SidebarBody.module.scss";
 import { useNavigate } from "react-router-dom";
 
-function SidebarBody({ openChat }) {
+//import { connect } from "react-redux";
+
+function SidebarBody(props) {
 
     const [chats, setChats] = useState([]);
     const navigate = useNavigate();
@@ -17,8 +19,7 @@ function SidebarBody({ openChat }) {
             },
         })
             .then((resp) => resp.json())
-            .then((data) => {
-                setChats(data)});
+            .then((data) => setChats(data));
     }
 
     useEffect(() => {
@@ -26,7 +27,7 @@ function SidebarBody({ openChat }) {
     }, []);
 
     useEffect(() => {
-        console.log("chats", chats);
+        //console.log("чаты пользователя: (SidebarBody)", chats);
     }, [chats]);
 
     const chatBlocks = chats.map((chat, index) => {
@@ -35,7 +36,7 @@ function SidebarBody({ openChat }) {
                 key={index}
                 className={styles.chatPreview}
                 onClick={() => {
-                    openChat(chat)
+                    //openChat(chat);
                     navigate(`/chat/${chat.id}`);
                 }}
             >
@@ -65,7 +66,10 @@ function SidebarBody({ openChat }) {
 
             <section
                 className={styles.chatPreview}
-                onClick={() => openChat({ id: -1, title: "Frontend chat" })}
+                onClick={() => {
+                    //openChat({ id: -1, title: "Front-end chat" });
+                    navigate(`/chat/-1`);
+                }}
             >
                 <div className={styles.chatPicture}>
                     <img
@@ -77,11 +81,11 @@ function SidebarBody({ openChat }) {
                 <div className={styles.chatDetails}>
                     <span className={styles.chatName}>Frontend chat</span>
                 </div>
-                <div className={styles.chatMeta}>
-                </div>
+                <div className={styles.chatMeta}></div>
             </section>
         </article>
     );
 }
 
-export { SidebarBody };
+export {SidebarBody}
+

@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ChatHeader.module.scss";
 
+//import { useSelector } from "react-redux";
+
 const showNotification = () => {
     if (window.Notification && Notification.permission !== "denied") {
         Notification.requestPermission(function (status) {
@@ -12,7 +14,8 @@ const showNotification = () => {
     }
 };
 
-function ChatHeader({ name }) {
+function ChatHeader({chat}) {
+
     return (
         <header className={styles.header}>
             <section className={styles.companion}>
@@ -22,7 +25,7 @@ function ChatHeader({ name }) {
                     alt="profile_pic"
                 />
                 <div className={styles.companionMeta}>
-                    <span className={styles.companionName}>{name}</span>
+                    <span className={styles.companionName}>{chat.id}</span>
                     <span className={styles.companionLastOnline}>was 1 hour ago</span>
                 </div>
             </section>

@@ -6,80 +6,77 @@ import { SidebarPage } from './Pages/SidebarPage'
 import { ProfilePage } from './Pages/ProfilePage'
 import { NavButtons } from "./Pages/NavButtons";
 
-import { ChatPage } from "./Pages/ChatPage";
+import ChatPage from "./Pages/ChatPage/ChatPage.jsx";
 
-import {useDispatch, useSelector} from 'react-redux'
+import { connect } from "react-redux";
+import { setViewAction } from "./actions/viewAction";
+import { renderNewMessageAction } from "./actions/messageAction";
 
-function App() {
+import { Centrifuge } from "centrifuge";
+const centrifuge = new Centrifuge("ws://localhost:8000/connection/websocket");
+const sub = centrifuge.newSubscription("chat");
 
-    const [chat, setChat] = useState({});
-
-    const dispatch = useDispatch()
-    const platform = useSelector(state => state)
-
-
-    function openChat(chat){
-        console.log('открыт чат: (app.js)', chat);
-        setChat(chat);
+function App(props) {
+    function addMessagesToChat(ctx) {
+        props.renderNewMessageAction(ctx.data.message);
     }
+
+    useEffect(() => {
+        sub.on("publication", addMessagesToChat);
+        sub.subscribe();
+        centrifuge.connect();
+    }, []);
 
     const [screenSize, getDimension] = useState({
         dynamicWidth: window.innerWidth,
-        dynamicHeight: window.innerHeight
+        dynamicHeight: window.innerHeight,
     });
 
     const setDimension = () => {
         getDimension({
             dynamicWidth: window.innerWidth,
-            dynamicHeight: window.innerHeight
-        })
-    }
+            dynamicHeight: window.innerHeight,
+        });
+    };
 
     useEffect(() => {
-        window.addEventListener('resize', setDimension);
-        console.log(screenSize)
-
-        if (screenSize.dynamicWidth <= 1100) {
-            dispatch({type: 'isMobile', payload: 0});
-        }
-        else {
-            dispatch({type: 'isDesktop', payload: 0});
-        }
-
-        return(() => {
-            window.removeEventListener('resize', setDimension);
-        })
-    }, [screenSize])
+        window.addEventListener("resize", setDimension);
+        props.setViewAction(screenSize);
+        return () => {
+            window.removeEventListener("resize", setDimension);
+        };
+    }, [screenSize]);
 
     return (
         <>
             <NavButtons />
 
-            {platform.isDesktop ?
+            {props.view.isDesktop ? (
                 <Routes>
-                    <Route exact path="/" element={<SidebarPage openChat={openChat}/>}>
-                        <Route path={`/chat/${chat.id}`} element={<ChatPage chat={chat} />} />
+                    <Route exact path="/" element={<SidebarPage />}>
+                        <Route path={`/chat/:id`} element={<ChatPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
-                        <Route
-                            path="*"
-                            element={<Navigate to="/" replace />}
-                        />
+                        <Route path="*" element={<Navigate to="/" replace />} />
                     </Route>
                 </Routes>
-                :
+            ) : (
                 <Routes>
-                    <Route exact path="/" element={<SidebarPage openChat={openChat}/>} />
+                    <Route exact path="/" element={<SidebarPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
-                    <Route path={`/chat/${chat.id}`} element={<ChatPage chat={chat}/>} />
-                    <Route
-                        path="*"
-                        element={<Navigate to="/" replace />}
-                    />
+
+                    <Route path={`/chat/:id`} element={<ChatPage />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
-            }
+            )}
         </>
     );
 }
 
+const mapStateToProps = (state) => ({
+    view: state.viewReduser,
+});
 
-export default App;
+export default connect(mapStateToProps, {
+    setViewAction,
+    renderNewMessageAction,
+})(App);
