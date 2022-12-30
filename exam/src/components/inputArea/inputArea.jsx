@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import './inputArea.css'
 
-const TRANSLATION_URL = ({ method }) => `https://microsoft-translator-text.p.rapidapi.com/translate?to%5B0%5D=${ method }
+const TRANSLATION_URL = ({ code }) => `https://microsoft-translator-text.p.rapidapi.com/translate?to%5B0%5D=${ code }
 &api-version=3.0&profanityAction=NoAction&textType=plain`
 
 export const InputArea = () => {
